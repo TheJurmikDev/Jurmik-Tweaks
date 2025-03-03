@@ -11,8 +11,6 @@
 This script modifies Windows system settings. Use at your own risk!  
 Always **create a backup** before applying any changes.  
 
----
-
 ## 📥 Installation & Usage  
 ```bash
 git clone https://github.com/TheJurmikDev/Windows-Tweaks.git
@@ -20,8 +18,6 @@ cd Jurmik-Tweaks
 python Jurmik_Tweaks.py
 ```
 Run the script as an **Administrator** and follow the menu.  
-
----
 
 ## 🔧 Tweaks List  
 ```yaml
@@ -32,5 +28,3 @@ Run the script as an **Administrator** and follow the menu.
 - [✔] Improve gaming performance  
 - [✔] Remove unnecessary bloatware  
 ```
-
----
