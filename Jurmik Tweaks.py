@@ -23,7 +23,7 @@ def loading_screen():
                            \___/\_,_/_/ /_/_/_/_/_/\_\   /_/  |__,__/\__/\_,_/_/\_\/___/
                                                                                                                                                         
                                             {reset}Made by {purple}TheJurmik <3
-                                                    {reset}Plan: {purple}Free""")
+                                                  {reset}Plan: {purple}Free""")
     time.sleep(0.2)
     if choice == "1":
         menu()
