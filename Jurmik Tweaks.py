@@ -2,14 +2,14 @@ import os
 from pystyle import *
 import time
 
-os.system('title "Jurmik Tweaks | Made By: TheJurmik Studio | Plan: Free" ')
+os.system('title "Jurmik Tweaks | Made By: TheJurmik | Plan: Free" ')
 os.system("cls")
 
 purple = "\033[38;2;147;112;219m"
 reset = "\033[0m"
 
 os.system("cls")
-os.system('title "Jurmik Tweaks | Made By: TheJurmik Studio | Plan: Free" ')
+os.system('title "Jurmik Tweaks | Made By: TheJurmik | Plan: Free" ')
 
 def loading_screen():
     choice = input(f"""
@@ -22,7 +22,7 @@ def loading_screen():
                            / // / // / __/  ' \/ /  '_/   / / | |/|/ / -_) _ `/  '_/(_-<
                            \___/\_,_/_/ /_/_/_/_/_/\_\   /_/  |__,__/\__/\_,_/_/\_\/___/
                                                                                                                                                         
-                                            {reset}Made by {purple}TheJurmik's Studio
+                                            {reset}Made by {purple}TheJurmik
                                                     {reset}Plan: {purple}Free""")
     time.sleep(0.2)
     if choice == "1":
@@ -39,7 +39,7 @@ def menu():
                            / // / // / __/  ' \/ /  '_/   / / | |/|/ / -_) _ `/  '_/(_-<
                            \___/\_,_/_/ /_/_/_/_/_/\_\   /_/  |__,__/\__/\_,_/_/\_\/___/
                                                                                                         
-                               {reset}Jurmik {purple}Tweaks {purple}| {reset}Made By: {purple}TheJurmik's Studio | {reset}Plan: {purple}Free""")
+                               {reset}Jurmik {purple}Tweaks {purple}| {reset}Made By: {purple}TheJurmik | {reset}Plan: {purple}Free""")
     choice = input(f"""
       {purple}[1] {reset}Memory Usage                    {purple}[10] {reset}Disable Background Programs   {purple}[19] {reset}Hardware DataQueueSize
       {purple}[2] {reset}Tweak Registry                  {purple}[11] {reset}Tweak Processor (CPU)         {purple}[20] {reset}BCD Tweaks
