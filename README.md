@@ -15,7 +15,7 @@ Always **create a backup** before applying any changes.
 
 ## 📥 Installation & Usage  
 ```bash
-git clone https://github.com/thejurmik/Jurmik-Tweaks.git
+git clone https://github.com/TheJurmikDev/Windows-Tweaks.git
 cd Jurmik-Tweaks
 python Jurmik_Tweaks.py
 ```
