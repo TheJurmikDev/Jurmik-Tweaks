@@ -61,12 +61,14 @@ def menu():
        {purple}[choice] {reset}>> {purple}""")
     
     if choice == "1":
+        print()
         os.system("fsutil behavior query memoryusage")
         os.system("fsutil behavior set memoryusage 2")
         time.sleep(2)
         menu()
 
     elif choice == "2":
+        print()
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /V HiberbootEnabled /T REG_dWORD /D 1 /F')
         time.sleep(0.5)
         os.system('reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackProgs" /d 0 /t REG_DWORD /f >nul')
@@ -84,7 +86,9 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "3":
+        print()
         os.system('sc stop "WMPNetworkSvc" > nul')
         time.sleep(0.5)
         os.system('sc config "WMPNetworkSvc" start= disabled > nul')
@@ -92,7 +96,9 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "4":
+        print()
         os.system('sc stop "WalletService" > nul')
         time.sleep(0.5)
         os.system('sc config "WalletService" start= disabled > nul')
@@ -100,13 +106,17 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "5":
+        print()
         os.system('reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d 0 /f > nul')
         time.sleep(0.5)
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "6":
+        print()
         os.system('sc stop "XblAuthManager" > nul')
         time.sleep(0.5)
         os.system('sc config "XblAuthManager" start= disabled > nul')
@@ -118,7 +128,9 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "7":
+        print()
         os.system('reg add "HKLM\SYSTEM\ControlSet001\Control\Power\PowerThrottling" /v "PowerThrottlingOff" /t REG_DWORD /d "1" /f')
         time.sleep(0.5)
         os.system('reg add "HKLM\SYSTEM\ControlSet002\Control\Power\PowerThrottling" /v "PowerThrottlingOff" /t REG_DWORD /d "1" /f')
@@ -128,13 +140,17 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "8":
+        print()
         os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /F /V "HwSchMode" /T REG_DWORD /d "2"')
         time.sleep(0.5)
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "9":
+        print()
         os.system('reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "SystemResponsiveness" /t REG_DWORD /d "0" /f')
         time.sleep(0.5)
         os.system('reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NoLazyMode" /t REG_DWORD /d "1" /f')
@@ -156,7 +172,9 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "10":
+        print()
         os.system('reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" /v "GlobalUserDisabled" /t REG_DWORD /d "1" /f')
         time.sleep(0.5)
         os.system('reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BackgroundAppGlobalToggle" /t REG_DWORD /d "0" /f')
@@ -166,7 +184,9 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "11":
+        print()
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "CoalescingTimerInterval" /t REG_DWORD /d "0" /f ')
         time.sleep(0.5)
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "CoalescingTimerInterval" /t REG_DWORD /d "0" /f ')
@@ -190,19 +210,25 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "12":
+        print()
         os.system('reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM" /v "EnableAeroPeek" /t REG_DWORD /d "0" /f')
         time.sleep(0.5)
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "13":
+        print()
         os.system('reg add "HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\MicrosoftEdge\Main" /v "AllowPrelaunch" /t REG_DWORD /d "0" /f')
         time.sleep(0.5)
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "14":
+        print()
         os.system('reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v "AppCaptureEnabled" /t REG_DWORD /d "0" /f')
         time.sleep(0.5)
         os.system('reg add "HKCU\System\GameConfigStore" /v "GameDVR_Enabled" /t REG_DWORD /d "0" /f')
@@ -212,7 +238,9 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "15":
+        print()
         os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AllowSearchToUseLocation" /t REG_DWORD /d 0 /f')
         time.sleep(0.5)
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Services\nvlddmkm\Global\Startup" /v "SendTelemetryData" /t REG_DWORD /d 0 /f')
@@ -364,14 +392,18 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "16":
+        print()
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Services\defragsvc" /v "Start" /t REG_DWORD /d "4" /f')
         os.system('schtasks /Delete /TN "\Microsoft\Windows\Defrag\ScheduledDefrag" /F')
         time.sleep(0.5)
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "17":
+        print()
         os.system('reg add "HKLM\SYSTEM\ControlSet001\Control\Power" /v "HibernateEnabled" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\SYSTEM\ControlSet002\Control\Power" /v "HibernateEnabled" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "HibernateEnabled" /t REG_DWORD /d "0" /f')
@@ -379,20 +411,26 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "18":
+        print()
         os.system('powercfg setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c')
         time.sleep(0.5)
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "19":
+        print()
         os.system('Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "20" /f')
         os.system('Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d "20" /f')
         time.sleep(0.5)
         print(f"Done !!!")
         time.sleep(1)
         menu()
+
     elif choice == "20":
+        print()
         os.system('bcdedit /set disabledynamictick yes')
         os.system('bcdedit /set useplatformtick yes')
         os.system('bcdedit /deletevalue useplatformclock')
@@ -400,17 +438,19 @@ def menu():
         print(f"Done !!!")
         time.sleep(1)
         menu()
-    elif choice == "21":    
+
+    elif choice == "21":  
+        print()  
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "LargeSystemCache" /t REG_DWORD /d "1" /f')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingExecutive" /t REG_DWORD /d "1" /f')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingCombining" /t REG_DWORD /d "1" /f')
         os.system('reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v "EnablePrefetcher" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v "EnableSuperfetch" /t REG_DWORD /d "0" /f')
-        time.sleep(0.5)
-        print(f"Done !!!")
-        time.sleep(1)
+        time.sleep(1.5)
         menu()
+
     elif choice == "22":
+        print()
         os.system('schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator"')
         os.system('schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /disable')
         os.system('schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\BthSQM"')
@@ -512,11 +552,11 @@ def menu():
         os.system('reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost" /v EnableWebContentEvaluation /t REG_DWORD /d 0 /f')
         os.system('reg add "HKLM\Software\Microsoft\PolicyManager\default\WiFi\AllowAutoConnectToWiFiSenseHotspots" /v value /t REG_DWORD /d 0 /f')
         os.system('reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v DODownloadMode /t REG_DWORD /d 0 /f')
-        time.sleep(0.5)
-        print(f"Done !!!")
-        time.sleep(1)
+        time.sleep(1.5)
         menu()
+
     elif choice == "23":
+        print()
         os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\TapiSrv" /v "Start" /t REG_DWORD /d "3" /f')
         os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\FontCache3.0.0.0" /v "Start" /t REG_DWORD /d "4" /f')
         os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\SEMgrSvc" /v "Start" /t REG_DWORD /d "4" /f')
@@ -622,22 +662,22 @@ def menu():
         os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SENS" /v "Start" /t REG_DWORD /d "4" /f')
         os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TabletInputService" /v "Start" /t REG_DWORD /d "3" /f')
         os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Themes" /v "Start" /t REG_DWORD /d "4" /f')
-        time.sleep(0.5)
-        print(f"Done !!!")
-        time.sleep(1)
+        time.sleep(1.5)
         menu()
+
     elif choice == "24":
-        os.system('Reg.exe delete "HKCU\System\GameConfigStore" /v "Win32_AutoGameModeDefaultProfile" /f')
-        os.system('Reg.exe delete "HKCU\System\GameConfigStore" /v "Win32_GameModeRelatedProcesses" /f')
-        os.system('Reg.exe add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehavior" /t REG_DWORD /d "2" /f')
-        os.system('Reg.exe add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "1" /f')
-        os.system('Reg.exe add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0" /f')
-        os.system('Reg.exe add "HKCU\System\GameConfigStore" /v "GameDVR_Enabled" /t REG_DWORD /d "0" /f')
-        os.system('Reg.exe add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "2" /f')
-        os.system('Reg.exe add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD /d "2" /f')
-        os.system('Reg.exe add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserFSEBehaviorMode" /t REG_DWORD /d "1" /f')
-        os.system('Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\GameDVR" /v "AllowGameDVR" /t REG_DWORD /d "0" /f')
-        os.system('Reg.exe add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR" /v "value" /t REG_DWORD /d "0" /f')
+        print()
+        os.system('Reg delete "HKCU\System\GameConfigStore" /v "Win32_AutoGameModeDefaultProfile" /f')
+        os.system('Reg delete "HKCU\System\GameConfigStore" /v "Win32_GameModeRelatedProcesses" /f')
+        os.system('Reg add "HKCU\System\GameConfigStore" /v "GameDVR_DSEBehavior" /t REG_DWORD /d "2" /f')
+        os.system('Reg add "HKCU\System\GameConfigStore" /v "GameDVR_DXGIHonorFSEWindowsCompatible" /t REG_DWORD /d "1" /f')
+        os.system('Reg add "HKCU\System\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD /d "0" /f')
+        os.system('Reg add "HKCU\System\GameConfigStore" /v "GameDVR_Enabled" /t REG_DWORD /d "0" /f')
+        os.system('Reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehavior" /t REG_DWORD /d "2" /f')
+        os.system('Reg add "HKCU\System\GameConfigStore" /v "GameDVR_FSEBehaviorMode" /t REG_DWORD /d "2" /f')
+        os.system('Reg add "HKCU\System\GameConfigStore" /v "GameDVR_HonorUserFSEBehaviorMode" /t REG_DWORD /d "1" /f')
+        os.system('Reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\GameDVR" /v "AllowGameDVR" /t REG_DWORD /d "0" /f')
+        os.system('Reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR" /v "value" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "LargeSystemCache" /t REG_DWORD /d "1" /f')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingExecutive" /t REG_DWORD /d "1" /f')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingCombining" /t REG_DWORD /d "1" /f')
@@ -650,23 +690,23 @@ def menu():
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "CoalescingTimerInterval" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "CoalescingTimerInterval" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance" /v "MaintenanceDisabled" /t REG_DWORD /d "1" /f')
-        os.system('Reg.exe add "HKLM\SYSTEM\ControlSet001\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /t REG_DWORD /d "0" /f')
+        os.system('Reg add "HKLM\SYSTEM\ControlSet001\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\System\CurrentControlSet\Control\Power" /v "HibernateEnabled" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Power" /v "HiberbootEnabled" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "SleepStudyDisabled" /t REG_DWORD /d "1" /f')
         os.system('reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "DisallowShaking" /t REG_DWORD /d "1" /f')
         os.system('reg add "HKCU\AppEvents\Schemes" /f')
         os.system('reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "DelayedDesktopSwitchTimeout" /t REG_DWORD /d "0" /f')
-        os.system('Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableExceptionChainValidation" /t REG_DWORD /d "1" /f')
-        os.system('Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "KernelSEHOPEnabled" /t REG_DWORD /d "0" /f')
+        os.system('Reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "DisableExceptionChainValidation" /t REG_DWORD /d "1" /f')
+        os.system('Reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "KernelSEHOPEnabled" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v "EnablePrefetcher" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v "EnableSuperfetch" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v "DisableWindowsConsumerFeatures" /t REG_DWORD /d "1" /f')
         os.system('reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WUDF" /v "LogEnable" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WUDF" /v "LogLevel" /t REG_DWORD /d "0" /f')
         os.system('reg add "HKLM\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" /v "DEPOff" /t REG_DWORD /d "1" /f')
-        os.system('Reg.exe delete "HKLM\SYSTEM\ControlSet001\Control\Session Manager\kernel" /v "DistributeTimers" /f')
-        os.system('Reg.exe add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\kernel" /f')
+        os.system('Reg delete "HKLM\SYSTEM\ControlSet001\Control\Session Manager\kernel" /v "DistributeTimers" /f')
+        os.system('Reg add "HKLM\SYSTEM\ControlSet001\Control\Session Manager\kernel" /f')
         os.system('reg add "HKLM\SYSTEM\ControlSet001\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d "38" /f')
         os.system('reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\FortniteClient-Win64-Shipping.exe\PerfOptions" /v "CpuPriorityClass" /t REG_DWORD /d "2" /f')
         os.system('reg add "HKU\.DEFAULT\Control Panel\Desktop" /v "MenuShowDelay" /t REG_SZ /d "0" /f >NUL 2>&1')
@@ -694,14 +734,11 @@ def menu():
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Tpm" /v "Start" /t REG_DWORD /d "0" /f ')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\WdiContextLog" /v "Start" /t REG_DWORD /d "1" /f ')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\WFP-IPsec Trace" /v "Start" /t REG_DWORD /d "0" /f')
-        time.sleep(0.5)
-        print(f"Done !!!")
-        time.sleep(1)
+        time.sleep(1.5)
         menu()
+
     else:
-        time.sleep(0.5)
-        print(f"Wrong Choice !!!")
-        time.sleep(1)
+        time.sleep(1.5)
         menu()
 
 if __name__ == "__main__":
