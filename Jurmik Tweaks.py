@@ -82,9 +82,7 @@ def menu():
         os.system('reg add "HKCU\SOFTWARE\Microsoft\Input\TIPC" /v "Enabled" /t REG_DWORD /d 0 /f >nul')
         time.sleep(0.5)
         os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingExecutive" /t REG_DWORD ')
-        time.sleep(0.5)
-        print(f"Done !!!")
-        time.sleep(1)
+        time.sleep(1.5)
         menu()
 
     elif choice == "3":
