@@ -49,14 +49,14 @@ def menu():
     choice = input(f"""
 
        {purple}[1] {reset}Memory Usage                    {purple}[10] {reset}Disable Background Programs   {purple}[19] {reset}Hardware DataQueueSize
-       {purple}[2] {reset}Tweak Registry                  {purple}[11] {reset}Tweak Processor (CPU)         {purple}[20] {reset}BCD Tweaks
+       {purple}[2] {reset}Disable Wifi Sense              {purple}[11] {reset}Tweak Processor (CPU)         {purple}[20] {reset}BCD Tweaks
        {purple}[3] {reset}Disable WMPNetworkSvc           {purple}[12] {reset}Disable Aero Peek             {purple}[21] {reset}Memory Tweaks
        {purple}[4] {reset}Disable WalletService           {purple}[13] {reset}Disable PreLaunch             {purple}[22] {reset}Disable Telemetry
        {purple}[5] {reset}Disable Bing search             {purple}[14] {reset}Disable GameDVR               {purple}[23] {reset}Disabling unnecessary Services
        {purple}[6] {reset}Disable Xbox live network       {purple}[15] {reset}Make Windows More Secure      {purple}[24] {reset}System Tweaks
        {purple}[7] {reset}Disable Power Throttling        {purple}[16] {reset}Optimize SSD                  {purple}[25] {reset}Fast Start Up
-       {purple}[8] {reset}Enable hardware GPU scheduling  {purple}[17] {reset}Disable Hibernation
-       {purple}[9] {reset}Tweak Graphic Card (GPU)        {purple}[18] {reset}High Performance
+       {purple}[8] {reset}Enable hardware GPU scheduling  {purple}[17] {reset}Disable Hibernation           {purple}[26] {reset}Disable TIPC
+       {purple}[9] {reset}Tweak Graphic Card (GPU)        {purple}[18] {reset}High Performance 
       
        {purple}[choice] {reset}>> {purple}""")
     
@@ -69,17 +69,8 @@ def menu():
 
     elif choice == "2":
         print()
-        os.system('reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackProgs" /d 0 /t REG_DWORD /f >nul')
-        time.sleep(0.5)
         os.system('reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\WcmSvc\wifinetworkmanager" /v "WiFiSenseCredShared" /d 0 /t REG_DWORD /f >nul')
-        time.sleep(0.5)
         os.system('reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\WcmSvc\wifinetworkmanager" /v "WiFiSenseOpen" /d 0 /t REG_DWORD /f >nul')
-        time.sleep(0.5)
-        os.system('reg add "HKLM\SOFTWARE\Microsoft\Input\TIPC" /v "Enabled" /t REG_DWORD /d 0 /f >nul')
-        time.sleep(0.5)
-        os.system('reg add "HKCU\SOFTWARE\Microsoft\Input\TIPC" /v "Enabled" /t REG_DWORD /d 0 /f >nul')
-        time.sleep(0.5)
-        os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingExecutive" /t REG_DWORD ')
         time.sleep(2)
         menu()
 
@@ -441,12 +432,14 @@ def menu():
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingExecutive" /t REG_DWORD /d "1" /f')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingCombining" /t REG_DWORD /d "1" /f')
         os.system('reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v "EnablePrefetcher" /t REG_DWORD /d "0" /f')
+        os.system('reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "DisablePagingExecutive" /t REG_DWORD ')
         os.system('reg add "HKLM\System\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v "EnableSuperfetch" /t REG_DWORD /d "0" /f')
         time.sleep(1.5)
         menu()
 
     elif choice == "22":
         print()
+        os.system('reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackProgs" /d 0 /t REG_DWORD /f >nul')
         os.system('schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator"')
         os.system('schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /disable')
         os.system('schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\BthSQM"')
@@ -736,6 +729,15 @@ def menu():
     elif choice == "25":
         print()
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /V HiberbootEnabled /T REG_dWORD /D 1 /F')
+        time.sleep(2)
+        menu()
+
+    elif choice == "26":
+        print()
+        os.system('reg add "HKLM\SOFTWARE\Microsoft\Input\TIPC" /v "Enabled" /t REG_DWORD /d 0 /f >nul')
+        time.sleep(0.5)
+        os.system('reg add "HKCU\SOFTWARE\Microsoft\Input\TIPC" /v "Enabled" /t REG_DWORD /d 0 /f >nul')
+        time.sleep(0.5)
         time.sleep(2)
         menu()
 
