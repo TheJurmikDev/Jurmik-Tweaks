@@ -690,4 +690,8 @@ def menu():
         time.sleep(1)
         menu()
 
-loading_screen()
+if __name__ == "__main__":
+    try:
+        loading_screen()
+    except KeyboardInterrupt:
+        os._exit
