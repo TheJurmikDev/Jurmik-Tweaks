@@ -36,28 +36,36 @@ def menu():
     os.system("cls")
     print(f"""{purple}
           
-                                __               _ __     ______                __      
-                            __ / /_ ________ _  (_) /__  /_  __/    _____ ___ _/ /__ ___
-                           / // / // / __/  ' \/ /  '_/   / / | |/|/ / -_) _ `/  '_/(_-<
-                           \___/\_,_/_/ /_/_/_/_/_/\_\   /_/  |__,__/\__/\_,_/_/\_\/___/
+
+
+
+                               __               _ __     ______                __      
+                           __ / /_ ________ _  (_) /__  /_  __/    _____ ___ _/ /__ ___
+                          / // / // / __/  ' \/ /  '_/   / / | |/|/ / -_) _ `/  '_/(_-<
+                          \___/\_,_/_/ /_/_/_/_/_/\_\   /_/  |__,__/\__/\_,_/_/\_\/___/
                                                                                                         
-                               {reset}Jurmik {purple}Tweaks {purple}| {reset}Made By: {purple}TheJurmik | {reset}Plan: {purple}Free""")
+                                {reset}Jurmik {purple}Tweaks {purple}| {reset}Made By: {purple}TheJurmik | {reset}Plan: {purple}Free""")
+    
     choice = input(f"""
-      {purple}[1] {reset}Memory Usage                    {purple}[10] {reset}Disable Background Programs   {purple}[19] {reset}Hardware DataQueueSize
-      {purple}[2] {reset}Tweak Registry                  {purple}[11] {reset}Tweak Processor (CPU)         {purple}[20] {reset}BCD Tweaks
-      {purple}[3] {reset}Disable WMPNetworkSvc           {purple}[12] {reset}Disable Aero Peek             {purple}[21] {reset}Memory Tweaks
-      {purple}[4] {reset}Disable WalletService           {purple}[13] {reset}Disable PreLaunch             {purple}[22] {reset}Disable Telemetry
-      {purple}[5] {reset}Disable Bing search             {purple}[14] {reset}Disable GameDVR               {purple}[23] {reset}Disabling unnecessary Services
-      {purple}[6] {reset}Disable Xbox live network       {purple}[15] {reset}Make Windows More Secure      {purple}[24] {reset}System Tweaks
-      {purple}[7] {reset}Disable Power Throttling        {purple}[16] {reset}Optimize SSD
-      {purple}[8] {reset}Enable hardware GPU scheduling  {purple}[17] {reset}Disable Hibernation
-      {purple}[9] {reset}Tweak Graphic Card (GPU)        {purple}[18] {reset}High Performance
+
+       {purple}[1] {reset}Memory Usage                    {purple}[10] {reset}Disable Background Programs   {purple}[19] {reset}Hardware DataQueueSize
+       {purple}[2] {reset}Tweak Registry                  {purple}[11] {reset}Tweak Processor (CPU)         {purple}[20] {reset}BCD Tweaks
+       {purple}[3] {reset}Disable WMPNetworkSvc           {purple}[12] {reset}Disable Aero Peek             {purple}[21] {reset}Memory Tweaks
+       {purple}[4] {reset}Disable WalletService           {purple}[13] {reset}Disable PreLaunch             {purple}[22] {reset}Disable Telemetry
+       {purple}[5] {reset}Disable Bing search             {purple}[14] {reset}Disable GameDVR               {purple}[23] {reset}Disabling unnecessary Services
+       {purple}[6] {reset}Disable Xbox live network       {purple}[15] {reset}Make Windows More Secure      {purple}[24] {reset}System Tweaks
+       {purple}[7] {reset}Disable Power Throttling        {purple}[16] {reset}Optimize SSD
+       {purple}[8] {reset}Enable hardware GPU scheduling  {purple}[17] {reset}Disable Hibernation
+       {purple}[9] {reset}Tweak Graphic Card (GPU)        {purple}[18] {reset}High Performance
       
-      {purple}[choice] {reset}>> {purple}""")
+       {purple}[choice] {reset}>> {purple}""")
+    
     if choice == "1":
+        os.system("fsutil behavior query memoryusage")
         os.system("fsutil behavior set memoryusage 2")
         time.sleep(2)
         menu()
+
     elif choice == "2":
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /V HiberbootEnabled /T REG_dWORD /D 1 /F')
         time.sleep(0.5)
