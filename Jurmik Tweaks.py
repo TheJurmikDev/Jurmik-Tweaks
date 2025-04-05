@@ -1,9 +1,6 @@
 import os
 import time
 
-os.system('title "Jurmik Tweaks | Made By: TheJurmik | Plan: Free" ')
-os.system("cls")
-
 purple = "\033[38;2;147;112;219m"
 reset = "\033[0m"
 
@@ -16,13 +13,13 @@ def loading_screen():
     
     
     
-                                __               _ __     ______                __      
-                            __ / /_ ________ _  (_) /__  /_  __/    _____ ___ _/ /__ ___
-                           / // / // / __/  ' \/ /  '_/   / / | |/|/ / -_) _ `/  '_/(_-<
-                           \___/\_,_/_/ /_/_/_/_/_/\_\   /_/  |__,__/\__/\_,_/_/\_\/___/
+                                    __               _ __     ______                __      
+                                __ / /_ ________ _  (_) /__  /_  __/    _____ ___ _/ /__ ___
+                               / // / // / __/  ' \/ /  '_/   / / | |/|/ / -_) _ `/  '_/(_-<
+                               \___/\_,_/_/ /_/_/_/_/_/\_\   /_/  |__,__/\__/\_,_/_/\_\/___/
                                                                                                                                                         
-                                            {reset}Made by {purple}TheJurmik <3
-                                                  {reset}Plan: {purple}Free""")
+                                                {reset}Made by {purple}TheJurmik {reset}with {purple}<3
+                                                      {reset}Plan: {purple}Free""")
     time.sleep(0.2)
     if choice == "1":
         menu()
