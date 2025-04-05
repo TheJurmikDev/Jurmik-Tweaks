@@ -15,7 +15,7 @@ Always **create a backup** before applying any changes.
 ```bash
 git clone https://github.com/TheJurmikDev/Jurmik-Tweaks.git
 cd Jurmik-Tweaks
-python Jurmik_Tweaks.py
+python "Jurmik Tweaks.py"
 ```
 Run the script as an **Administrator** and follow the menu.  
 
