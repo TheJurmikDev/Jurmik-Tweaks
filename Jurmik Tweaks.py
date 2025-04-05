@@ -12,7 +12,12 @@ def loading_screen():
 {purple}
     
     
+
+
+
+
     
+
                                     __               _ __     ______                __      
                                 __ / /_ ________ _  (_) /__  /_  __/    _____ ___ _/ /__ ___
                                / // / // / __/  ' \/ /  '_/   / / | |/|/ / -_) _ `/  '_/(_-<
@@ -20,6 +25,7 @@ def loading_screen():
                                                                                                                                                         
                                                 {reset}Made by {purple}TheJurmik {reset}with {purple}<3
                                                       {reset}Plan: {purple}Free""")
+
     time.sleep(0.2)
     if choice == "1":
         menu()
@@ -28,8 +34,8 @@ def loading_screen():
 
 def menu():
     os.system("cls")
-    print(f"""
-{purple}
+    print(f"""{purple}
+          
                                 __               _ __     ______                __      
                             __ / /_ ________ _  (_) /__  /_  __/    _____ ___ _/ /__ ___
                            / // / // / __/  ' \/ /  '_/   / / | |/|/ / -_) _ `/  '_/(_-<
