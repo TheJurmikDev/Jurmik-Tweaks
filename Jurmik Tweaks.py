@@ -54,7 +54,7 @@ def menu():
        {purple}[4] {reset}Disable WalletService           {purple}[13] {reset}Disable PreLaunch             {purple}[22] {reset}Disable Telemetry
        {purple}[5] {reset}Disable Bing search             {purple}[14] {reset}Disable GameDVR               {purple}[23] {reset}Disabling unnecessary Services
        {purple}[6] {reset}Disable Xbox live network       {purple}[15] {reset}Make Windows More Secure      {purple}[24] {reset}System Tweaks
-       {purple}[7] {reset}Disable Power Throttling        {purple}[16] {reset}Optimize SSD                  {purple}[25] {reset}Fast Start Up
+       {purple}[7] {reset}Disable Power Throttling        {purple}[16] {reset}Auto Defrag SSD               {purple}[25] {reset}Fast Start Up
        {purple}[8] {reset}Enable hardware GPU scheduling  {purple}[17] {reset}Disable Hibernation           {purple}[26] {reset}Disable TIPC
        {purple}[9] {reset}Tweak Graphic Card (GPU)        {purple}[18] {reset}High Performance 
       
