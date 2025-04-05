@@ -694,4 +694,5 @@ if __name__ == "__main__":
     try:
         loading_screen()
     except KeyboardInterrupt:
+        print(reset)
         os._exit
