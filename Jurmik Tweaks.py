@@ -1,5 +1,4 @@
 import os
-from pystyle import *
 import time
 
 os.system('title "Jurmik Tweaks | Made By: TheJurmik | Plan: Free" ')
