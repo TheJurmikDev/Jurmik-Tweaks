@@ -54,7 +54,7 @@ def menu():
        {purple}[4] {reset}Disable WalletService           {purple}[13] {reset}Disable PreLaunch             {purple}[22] {reset}Disable Telemetry
        {purple}[5] {reset}Disable Bing search             {purple}[14] {reset}Disable GameDVR               {purple}[23] {reset}Disabling unnecessary Services
        {purple}[6] {reset}Disable Xbox live network       {purple}[15] {reset}Make Windows More Secure      {purple}[24] {reset}System Tweaks
-       {purple}[7] {reset}Disable Power Throttling        {purple}[16] {reset}Optimize SSD
+       {purple}[7] {reset}Disable Power Throttling        {purple}[16] {reset}Optimize SSD                  {purple}[25] {reset}Fast Start Up
        {purple}[8] {reset}Enable hardware GPU scheduling  {purple}[17] {reset}Disable Hibernation
        {purple}[9] {reset}Tweak Graphic Card (GPU)        {purple}[18] {reset}High Performance
       
@@ -69,8 +69,6 @@ def menu():
 
     elif choice == "2":
         print()
-        os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /V HiberbootEnabled /T REG_dWORD /D 1 /F')
-        time.sleep(0.5)
         os.system('reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackProgs" /d 0 /t REG_DWORD /f >nul')
         time.sleep(0.5)
         os.system('reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\WcmSvc\wifinetworkmanager" /v "WiFiSenseCredShared" /d 0 /t REG_DWORD /f >nul')
@@ -733,6 +731,12 @@ def menu():
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\WdiContextLog" /v "Start" /t REG_DWORD /d "1" /f ')
         os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\WFP-IPsec Trace" /v "Start" /t REG_DWORD /d "0" /f')
         time.sleep(1.5)
+        menu()
+
+    elif choice == "25":
+        print()
+        os.system('reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /V HiberbootEnabled /T REG_dWORD /D 1 /F')
+        time.sleep(2)
         menu()
 
     else:
