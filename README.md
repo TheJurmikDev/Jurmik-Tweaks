@@ -28,3 +28,4 @@ Run the script as an **Administrator** and follow the menu.
 - [✔] Improve gaming performance  
 - [✔] Remove unnecessary bloatware  
 ```
+### Made By TheJurmik | Visit offical site https://thejurmik.dev
